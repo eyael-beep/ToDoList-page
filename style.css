@@ -1,0 +1,86 @@
+
+body {
+  background-color: #e6e6fa;  
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.todo-container{
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+  text-align: center;
+  font-size:32px;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.todo-input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cdbdbd;
+  border-radius: 4px;
+  font-size: 16px;
+
+}
+.add-task-btn{
+  background-color: #20B2AA; 
+  color: white; 
+  border: none; 
+  padding: 12px 28px;
+  border-radius: 30px; 
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+  display: block;
+  margin: 20px auto;
+}
+.add-task-btn:hover {
+  background-color: #3CB371; 
+  transform: scale(1.1); 
+}
+.todo-list{
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+  }
+.todo-list li {
+  background-color: #fff; 
+  padding: 10px; 
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+/* Add hover effect on each task */
+#todo-list li:hover {
+  background-color: #f9f9f9; 
+}
+
+.delete-btn {
+  background-color: #ff6347; 
+  color: white; 
+  border: none; 
+  padding: 5px 12px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  font-size: 14px; 
+}
+
+.delete-btn:hover {
+  background-color: #e55347; 
+}

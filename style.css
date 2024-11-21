@@ -1,86 +1,126 @@
-
-body {
-  background-color: #e6e6fa;  
-  color: #333333;
+/* Apply border-box to all elements */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box; /* Ensure padding and borders are inside the element's width */
 }
 
-.todo-container{
-  background-color: white;
-  width: 100%;
-  max-width: 500px;
-  padding: 8px;
+/* Body styling */
+body {
+  background-color: #f4f4f9;  /* Soft light lavender background */
+  color: #444;  /* Dark gray text */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Font family */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Take full height of the viewport */
+}
+
+/* Todo Container */
+.Todo-Container {
+  background-color: #ffffff;  /* White container */
+  border: 1px solid #d1d1d1; /* Light gray border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+  width: 90%; /* Take 90% of the viewport width, adjust as needed */
+  max-width: 500px; /* Limit the maximum width to 500px */
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the container */
 }
+
+/* Header styling */
 header h1 {
   text-align: center;
-  font-size:32px;
+  font-size: 32px;
   margin-bottom: 20px;
   color: #333;
   text-transform: uppercase;
   font-weight: bold;
 }
-.todo-input{
-  width: 100%;
+
+/* Input field section */
+.todo-input-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+  align-items: center; /* Center input and button */
+}
+
+/* Styling for the input field */
+.todo-input {
+  width: 100%; /* Make input field 100% of the container */
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #cdbdbd;
   border-radius: 4px;
   font-size: 16px;
-
+  box-sizing: border-box; 
 }
-.add-task-btn{
-  background-color: #20B2AA; 
-  color: white; 
-  border: none; 
+
+/* Button styling */
+.add-task-btn {
+  background-color: #b0a1cc;  /* Muted lavender button */
+  color: white;
+  border: none;
   padding: 12px 28px;
-  border-radius: 30px; 
+  border-radius: 30px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: transform 0.3s ease, background-color 0.3s ease; 
+  transition: transform 0.3s ease, background-color 0.3s ease;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto; /* Center the button */
 }
+
 .add-task-btn:hover {
-  background-color: #3CB371; 
-  transform: scale(1.1); 
+  background-color: #9e8bb0;
+  transform: scale(1.1);
 }
-.todo-list{
-    list-style-type: none; 
-    padding: 0;
-    margin: 0;
-  }
+
+/* Styling for the todo list */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ensure todo list takes the full width of the container */
+}
+
+/* Styling for each task item */
 .todo-list li {
-  background-color: #fff; 
-  padding: 10px; 
+  background-color: #fafafa;  /* Very light gray for task items */
+  border-left: 5px solid #b0a1cc;
+  padding: 10px;
   margin-bottom: 10px;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  display: flex; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Ensure task item takes the full width of the input field */
+  box-sizing: border-box;
 }
+
 /* Add hover effect on each task */
-#todo-list li:hover {
-  background-color: #f9f9f9; 
+.todo-list li:hover {
+  background-color: #f1f1f1;
 }
-
+/* Delete Button Styling */
 .delete-btn {
-  background-color: #ff6347; 
-  color: white; 
-  border: none; 
-  padding: 5px 12px; 
-  border-radius: 4px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-  font-size: 14px; 
+  background-color: #76c7c0; 
+  color: white; /* White text on red background */
+  border: none; /* Remove default button border */
+  padding: 5px 10px; /* Padding for a comfortable clickable area */
+  border-radius: 4px; /* Rounded corners for a smooth look */
+  cursor: pointer; /* Indicates it's clickable */
+  font-size: 14px; /* Text size */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
+/* Hover effect to provide visual feedback */
 .delete-btn:hover {
-  background-color: #e55347; 
+  background-color: #66b0a1; /* Darker red when hovered */
+  transform: scale(1.05); /* Slight zoom effect when hovered */
 }
+
